@@ -8,14 +8,11 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 ul {
 	list-style: none;
-}
-
-input {
-	appearance: none;
 }
 
 .container {
@@ -92,13 +89,58 @@ input {
 
 .right-container form {
 	width: 100%;
-	margin: 50px 0;
 	background-color: #ffffff;
-	display: table;
+	padding: 0 10px 20px 10px;
+}
+
+.right-container form ul {
+	display: grid;
+	grid-template-columns: repeat(2, 250px);
+	gap: 20px 80px;
+}
+
+.right-container form ul h2 {
+	grid-column: span 2;
 }
 
 .right-container form ul li {
 	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+}
+
+label {
+	font-size: 0.65rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+
+input {
+	border: 1px solid #e5e7eb;
+	border-radius: 4px;
+	padding: 7px;
+}
+
+input:focus {
+	outline: none;
+	border: 1px solid rgb(152, 156, 253);
+	box-shadow: 4px 5px 11px -3px #a4a3a3;
+}
+
+.error,
+input:invalid {
+	border: 1px solid red;
+}
+
+.error + span::after {
+	content: '* Passwords do not match';
+	bottom: 0;
+	left: 0;
+	color: crimson;
+	font-size: 0.5rem;
+	text-transform: initial;
 }
 
 button {
@@ -111,6 +153,7 @@ button {
 	cursor: pointer;
 	font-weight: 600;
 	font-size: 0.9rem;
+	margin-top: 40px;
 }
 
 .login-text-container {

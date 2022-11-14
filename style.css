@@ -79,10 +79,15 @@ input {
 .right-container p {
 	font-weight: bold;
 	font-size: 1.2rem;
+	line-height: 1.5rem;
 }
 
 .right-container div {
 	padding-left: 50px;
+}
+
+.right-container div span {
+	font-style: italic;
 }
 
 .right-container form {
@@ -114,6 +119,7 @@ button {
 
 .login-text-container p {
 	font-size: 0.95rem;
+	font-weight: 600;
 }
 
 .login-text-container a {

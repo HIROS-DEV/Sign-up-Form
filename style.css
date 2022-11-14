@@ -130,17 +130,18 @@ input:focus {
 }
 
 .error,
+.error_confirm,
 input:invalid {
 	border: 1px solid red;
 }
 
-.error + span::after {
-	content: '* Passwords do not match';
+form span {
 	bottom: 0;
 	left: 0;
 	color: crimson;
 	font-size: 0.5rem;
 	text-transform: initial;
+	padding-top: 2px;
 }
 
 button {
